@@ -1,0 +1,73 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "E-Commerce Redesign",
+      "clientId": "1",
+      "status": "Completed",
+      "budget": 5000,
+      "startDate": "2023-01-15",
+      "description": "A complete overhaul of the client's e-commerce platform using Next.js and Shopify.",
+      "isPublic": false,
+      "technologies": [
+        "Next.js",
+        "Shopify",
+        "Tailwind CSS"
+      ],
+      "imageUrl": "/placeholder-project.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Internal Dashboard",
+      "clientId": "2",
+      "status": "In Progress",
+      "budget": 3500,
+      "startDate": "2023-03-10",
+      "description": "Analytics dashboard for internal team use.",
+      "isPublic": false,
+      "technologies": [
+        "React",
+        "D3.js",
+        "Node.js"
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "id": "1",
+      "name": "Alice Johnson",
+      "company": "TechRetail Inc.",
+      "email": "alice@techretail.com",
+      "phone": "555-0101"
+    },
+    {
+      "id": "2",
+      "name": "Bob Smith",
+      "company": "DataCorp",
+      "email": "bob@datacorp.com",
+      "phone": "555-0102"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "projectId": "2",
+      "title": "Design Database Schema",
+      "status": "Done",
+      "dueDate": "2023-03-12"
+    }
+  ],
+  "profile": {
+    "name": "Alex Dev",
+    "role": "Full Stack Developer",
+    "bio": "Passionate developer with 5+ years of experience in building scalable web applications.",
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Tailwind CSS"
+    ],
+    "contactEmail": "alex@example.com"
+  }
+}

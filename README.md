@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Local-Biz-Hub
 
-## Getting Started
+A unified local ERP and Portfolio application designed for freelancers and developers. It combines a private project management dashboard with a public-facing portfolio showcase.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🔒 ERP Admin (Private)
+- **Dashboard**: Overview of revenue, active projects, and pending tasks.
+- **Project Manager**: Create, edit, and delete projects. Mark projects as "Public" to showcase them.
+- **Client CRM**: Manage client contact details and associations.
+- **Task Tracker**: Simple to-do list linked to projects.
+- **Authentication**: Simple password-based protection.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🌍 Portfolio (Public)
+- **Hero Section**: Professional introduction.
+- **Projects Showcase**: Automatically displays projects marked as "Public" and "Completed".
+- **Project Details**: Dedicated page for each project with description and tech stack.
+- **Skills & Contact**: Highlight your expertise and provide contact info.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup Instructions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-## Learn More
+2.  **Run the Application**:
+    ```bash
+    npm run dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+3.  **Access the App**:
+    - **Public Portfolio**: Open [http://localhost:3000](http://localhost:3000)
+    - **Admin Dashboard**: Open [http://localhost:3000/admin](http://localhost:3000/admin)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Default Credentials
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Login URL**: `/login` (or try accessing `/admin`)
+- **Password**: `admin123` (or set `ADMIN_PASSWORD` in `.env`)
 
-## Deploy on Vercel
+## Data Persistence
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All data is stored locally in `data/db.json`. This file is automatically created with seed data if it doesn't exist. You can back up this file to save your data.
