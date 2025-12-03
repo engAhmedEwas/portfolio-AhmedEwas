@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Local-Biz-Hub",
-  description: "Unified ERP and Portfolio System",
+  title: "Ewas Portfolio",
+  description: "Full Stack Developer Portfolio & Admin Dashboard",
 };
 
 export default function RootLayout({

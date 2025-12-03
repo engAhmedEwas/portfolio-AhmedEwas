@@ -37,7 +37,7 @@ export default function AdminLayout({
             {/* Sidebar */}
             <aside className="w-64 bg-white dark:bg-gray-800 shadow-md flex flex-col transition-colors duration-300">
                 <div className="p-6 border-b dark:border-gray-700">
-                    <h1 className="text-xl font-bold text-gray-800 dark:text-white">Local-Biz-Hub</h1>
+                    <h1 className="text-xl font-bold text-gray-800 dark:text-white">Ahmed Ewas Portfolio</h1>
                     <p className="text-xs text-gray-500 dark:text-gray-400">ERP Admin</p>
                 </div>
                 <nav className="flex-1 p-4 space-y-2">

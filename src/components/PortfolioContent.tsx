@@ -25,7 +25,7 @@ export default function PortfolioContent({ projects, profile }: PortfolioContent
                             {t.hero.title} <span className="text-blue-600 dark:text-blue-400">{t.hero.titleAccent}</span> {t.hero.titleEnd}
                         </h1>
                         <p className="text-xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
-                            {profile.bio || t.hero.subtitle}
+                            {t.hero.subtitle}
                         </p>
                         <div className="flex justify-center gap-4">
                             <Link href="#contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-full font-medium transition-all shadow-lg hover:shadow-blue-200">
@@ -177,7 +177,7 @@ export default function PortfolioContent({ projects, profile }: PortfolioContent
             <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-4 md:mb-0">
-                        <span className="text-xl font-bold text-gray-900 dark:text-white">Local-Biz-Hub</span>
+                        <span className="text-xl font-bold text-gray-900 dark:text-white">Ahmed Ewas - Full Stack Developer</span>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">© 2023 {t.footer.rights}</p>
                     </div>
                     <div className="flex space-x-6">

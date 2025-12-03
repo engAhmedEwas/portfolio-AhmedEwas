@@ -97,6 +97,15 @@
       "passwordHash": "$2b$10$nkEDHGq3kOsiW6Eo0GHzr.5NI1b06oa6LyUt64.heiX87k8yACJZK",
       "isAdmin": true,
       "createdAt": "2025-12-03T07:17:32.118Z"
+    },
+    {
+      "id": "1764799583556",
+      "name": "Test Admin",
+      "username": "testadmin",
+      "email": "test@admin.com",
+      "passwordHash": "$2b$10$qkDvDWaZjLL9b0djtoAMh.e/9nH0IUlTTw6bq.E8FR3v9WpAAiyOm",
+      "isAdmin": true,
+      "createdAt": "2025-12-03T22:06:23.607Z"
     }
   ]
 }

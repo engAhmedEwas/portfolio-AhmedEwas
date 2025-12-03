@@ -13,7 +13,7 @@ export default function TranslatedNavbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
-                        Local-Biz-Hub
+                        Ahmed Ewas - Full Stack Developer
                     </Link>
                     <div className="flex items-center space-x-8">
                         <Link href="/#home" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">

@@ -82,7 +82,7 @@ export default function SignupPage() {
                         Create your account
                     </h2>
                     <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
-                        Join Local-Biz-Hub today
+                        Join Ahmed Ewas Portfolio today
                     </p>
                 </div>
                 <form onSubmit={handleSubmit} className="mt-8 space-y-6">
