@@ -13,6 +13,7 @@ export interface Project {
     imageUrl?: string;
     liveUrl?: string;
     repoUrl?: string;
+    createdAt?: string;
 }
 
 export interface Client {
@@ -21,6 +22,7 @@ export interface Client {
     company: string;
     email: string;
     phone: string;
+    createdAt?: string;
 }
 
 export interface Task {
@@ -29,6 +31,7 @@ export interface Task {
     title: string;
     status: "Pending" | "In Progress" | "Done";
     dueDate: string;
+    createdAt?: string;
 }
 
 export interface Profile {
@@ -39,9 +42,20 @@ export interface Profile {
     contactEmail: string;
 }
 
+export interface User {
+    id: string;
+    name: string;
+    username: string;
+    email: string;
+    passwordHash: string;
+    isAdmin: boolean;
+    createdAt: string;
+}
+
 export interface DatabaseSchema {
     projects: Project[];
     clients: Client[];
     tasks: Task[];
     profile: Profile;
+    users: User[];
 }

@@ -18,7 +18,7 @@ export default function PortfolioContent({ projects, profile }: PortfolioContent
     return (
         <>
             {/* Hero Section */}
-            <section id="home" className="relative bg-white dark:bg-gray-800 overflow-hidden">
+            <section id="home" className="relative bg-gray-50 dark:bg-gray-900 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
                     <div className="text-center max-w-3xl mx-auto">
                         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
@@ -31,7 +31,7 @@ export default function PortfolioContent({ projects, profile }: PortfolioContent
                             <Link href="#contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-full font-medium transition-all shadow-lg hover:shadow-blue-200">
                                 {t.hero.getInTouch}
                             </Link>
-                            <Link href="#projects" className="px-8 py-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-600 rounded-full font-medium hover:bg-gray-50 dark:hover:bg-gray-600 transition-all">
+                            <Link href="#projects" className="px-8 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-full font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all shadow-sm hover:shadow-md">
                                 {t.hero.viewWork}
                             </Link>
                         </div>
@@ -91,7 +91,7 @@ export default function PortfolioContent({ projects, profile }: PortfolioContent
             </section>
 
             {/* Skills Section */}
-            <section id="skills" className="py-24 bg-white dark:bg-gray-800">
+            <section id="skills" className="py-24 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t.skills.title}</h2>
@@ -99,28 +99,28 @@ export default function PortfolioContent({ projects, profile }: PortfolioContent
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <div className="p-6 bg-gray-50 dark:bg-gray-700 rounded-xl text-center hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors">
+                        <div className="p-6 bg-white dark:bg-gray-800 rounded-xl text-center border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
                             <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center mx-auto mb-4">
                                 <Code className="w-6 h-6" />
                             </div>
                             <h3 className="font-bold text-gray-900 dark:text-white mb-2">{t.skills.frontend}</h3>
                             <p className="text-sm text-gray-600 dark:text-gray-400">React, Next.js, Tailwind CSS, TypeScript</p>
                         </div>
-                        <div className="p-6 bg-gray-50 dark:bg-gray-700 rounded-xl text-center hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors">
+                        <div className="p-6 bg-white dark:bg-gray-800 rounded-xl text-center border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
                             <div className="w-12 h-12 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-400 rounded-lg flex items-center justify-center mx-auto mb-4">
                                 <Database className="w-6 h-6" />
                             </div>
                             <h3 className="font-bold text-gray-900 dark:text-white mb-2">{t.skills.backend}</h3>
                             <p className="text-sm text-gray-600 dark:text-gray-400">Node.js, Python, SQL, REST APIs</p>
                         </div>
-                        <div className="p-6 bg-gray-50 dark:bg-gray-700 rounded-xl text-center hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors">
+                        <div className="p-6 bg-white dark:bg-gray-800 rounded-xl text-center border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
                             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 rounded-lg flex items-center justify-center mx-auto mb-4">
                                 <Layout className="w-6 h-6" />
                             </div>
                             <h3 className="font-bold text-gray-900 dark:text-white mb-2">{t.skills.design}</h3>
                             <p className="text-sm text-gray-600 dark:text-gray-400">Figma, UI/UX Principles, Responsive Design</p>
                         </div>
-                        <div className="p-6 bg-gray-50 dark:bg-gray-700 rounded-xl text-center hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors">
+                        <div className="p-6 bg-white dark:bg-gray-800 rounded-xl text-center border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
                             <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 text-orange-600 dark:text-orange-400 rounded-lg flex items-center justify-center mx-auto mb-4">
                                 <Github className="w-6 h-6" />
                             </div>
@@ -153,8 +153,28 @@ export default function PortfolioContent({ projects, profile }: PortfolioContent
                 </div>
             </section>
 
+            {/* Login Section */}
+            <section className="py-16 bg-white dark:bg-gray-900">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 md:p-12 text-center text-white shadow-xl">
+                        <h2 className="text-3xl font-bold mb-4">{t.community.title}</h2>
+                        <p className="text-blue-100 mb-8 text-lg">
+                            {t.community.subtitle}
+                        </p>
+                        <div className="flex flex-col sm:flex-row justify-center gap-4">
+                            <Link href="/signup" className="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                                {t.community.signUp}
+                            </Link>
+                            <Link href="/login" className="inline-flex items-center justify-center px-8 py-3 bg-transparent text-white border-2 border-white rounded-full font-bold hover:bg-white/10 transition-colors">
+                                {t.community.login}
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Footer */}
-            <footer className="bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 py-12">
+            <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-4 md:mb-0">
                         <span className="text-xl font-bold text-gray-900 dark:text-white">Local-Biz-Hub</span>

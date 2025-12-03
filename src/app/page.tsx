@@ -2,7 +2,7 @@ import { db } from '@/lib/db';
 import TranslatedNavbarWrapper from '@/components/TranslatedNavbarWrapper';
 import PortfolioContentWrapper from '@/components/PortfolioContentWrapper';
 import SettingsTogglesWrapper from '@/components/SettingsTogglesWrapper';
-import ThemeDebugWrapper from '@/components/ThemeDebugWrapper';
+
 
 export const dynamic = 'force-dynamic';
 
@@ -14,7 +14,6 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <ThemeDebugWrapper />
       <TranslatedNavbarWrapper />
       <SettingsTogglesWrapper />
       <PortfolioContentWrapper projects={publicProjects} profile={profile} />

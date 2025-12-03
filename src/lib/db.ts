@@ -12,7 +12,7 @@ export class JsonDB {
         } catch (error) {
             // If file doesn't exist, return empty structure or handle error
             console.error("Error reading DB:", error);
-            return { projects: [], clients: [], tasks: [], profile: { name: "", role: "", bio: "", skills: [], contactEmail: "" } };
+            return { projects: [], clients: [], tasks: [], profile: { name: "", role: "", bio: "", skills: [], contactEmail: "" }, users: [] };
         }
     }
 
@@ -32,9 +32,10 @@ export class JsonDB {
 
     async createProject(project: any) {
         const db = await this.read();
-        db.projects.push(project);
+        const newProject = { ...project, createdAt: new Date().toISOString() };
+        db.projects.push(newProject);
         await this.write(db);
-        return project;
+        return newProject;
     }
 
     async updateProject(id: string, updates: any) {
@@ -61,9 +62,10 @@ export class JsonDB {
 
     async createClient(client: any) {
         const db = await this.read();
-        db.clients.push(client);
+        const newClient = { ...client, createdAt: new Date().toISOString() };
+        db.clients.push(newClient);
         await this.write(db);
-        return client;
+        return newClient;
     }
 
     async updateClient(id: string, updates: any) {
@@ -90,9 +92,10 @@ export class JsonDB {
 
     async createTask(task: any) {
         const db = await this.read();
-        db.tasks.push(task);
+        const newTask = { ...task, createdAt: new Date().toISOString() };
+        db.tasks.push(newTask);
         await this.write(db);
-        return task;
+        return newTask;
     }
 
     async updateTask(id: string, updates: any) {
@@ -115,6 +118,38 @@ export class JsonDB {
     async getProfile() {
         const db = await this.read();
         return db.profile;
+    }
+
+    // User Methods
+    async createUser(user: any) {
+        const db = await this.read();
+        const newUser = { ...user, createdAt: new Date().toISOString() };
+        db.users = db.users || []; // Ensure users array exists
+        db.users.push(newUser);
+        await this.write(db);
+        return newUser;
+    }
+
+    async getUserByEmail(email: string) {
+        const db = await this.read();
+        return (db.users || []).find((u) => u.email === email);
+    }
+
+    async getUserById(id: string) {
+        const db = await this.read();
+        return (db.users || []).find((u) => u.id === id);
+    }
+
+    async updateUser(id: string, updates: any) {
+        const db = await this.read();
+        db.users = db.users || [];
+        const index = db.users.findIndex((u) => u.id === id);
+        if (index !== -1) {
+            db.users[index] = { ...db.users[index], ...updates };
+            await this.write(db);
+            return db.users[index];
+        }
+        return null;
     }
 }
 

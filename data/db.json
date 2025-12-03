@@ -69,5 +69,34 @@
       "Tailwind CSS"
     ],
     "contactEmail": "alex@example.com"
-  }
+  },
+  "users": [
+    {
+      "id": "1764743878118",
+      "name": "Test User",
+      "username": "testuser",
+      "email": "test@example.com",
+      "passwordHash": "$2b$10$04H3U1yoc/ooE8GJ0gMunOyeEuVWgsgjadwEb/eUNsHQp50m01cje",
+      "isAdmin": false,
+      "createdAt": "2025-12-03T06:37:58.124Z"
+    },
+    {
+      "id": "1764744182627",
+      "name": "Ahmed Sayed",
+      "username": "ahmedewas",
+      "email": "eng.ahmedewas@gmail.com",
+      "passwordHash": "$2b$10$vMVS8UwkxRVN0lgdl0wja.yp7hzSiHgjy8rmKhTJpEC4jG1HJun3C",
+      "isAdmin": true,
+      "createdAt": "2025-12-03T06:43:02.634Z"
+    },
+    {
+      "id": "1764746252116",
+      "name": "nour",
+      "username": "mohamed",
+      "email": "nouradmon@admin.com",
+      "passwordHash": "$2b$10$nkEDHGq3kOsiW6Eo0GHzr.5NI1b06oa6LyUt64.heiX87k8yACJZK",
+      "isAdmin": true,
+      "createdAt": "2025-12-03T07:17:32.118Z"
+    }
+  ]
 }
