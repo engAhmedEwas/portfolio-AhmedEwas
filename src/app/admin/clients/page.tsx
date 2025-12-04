@@ -1,5 +1,7 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import { useState, useEffect } from 'react';
 import { Client } from '@/types';
 import { Plus, Edit, Trash2, X, Mail, Phone, Building } from 'lucide-react';

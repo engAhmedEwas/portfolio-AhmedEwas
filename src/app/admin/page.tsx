@@ -1,5 +1,7 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import { useEffect, useState } from 'react';
 import { Project, Task } from '@/types';
 import { DollarSign, Folder, CheckCircle, Clock } from 'lucide-react';
