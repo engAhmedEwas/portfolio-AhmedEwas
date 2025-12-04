@@ -1,5 +1,7 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import { useState } from 'react';
 import { UserPlus, Shield } from 'lucide-react';
 import { useLanguage } from '@/components/LanguageProvider';
