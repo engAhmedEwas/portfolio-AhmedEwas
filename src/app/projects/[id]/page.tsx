@@ -4,10 +4,16 @@ import { ArrowLeft, Calendar, DollarSign, CheckCircle, ExternalLink, Github } fr
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-export const dynamic = 'force-dynamic';
+export async function generateStaticParams() {
+    const projects = await db.getProjects();
+    return projects.map((project) => ({
+        id: project.id,
+    }));
+}
 
-export default async function ProjectDetailsPage({ params }: { params: { id: string } }) {
-    const project = await db.getProjectById(params.id);
+export default async function ProjectDetailsPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
+    const project = await db.getProjectById(id);
 
     if (!project || !project.isPublic) {
         notFound();
