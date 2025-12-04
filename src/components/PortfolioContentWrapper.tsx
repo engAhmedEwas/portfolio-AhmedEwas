@@ -1,7 +1,11 @@
 'use client';
 
-import PortfolioContent from './PortfolioContent';
+import dynamic from 'next/dynamic';
 import { Project, Profile } from '@/types';
+
+const PortfolioContent = dynamic(() => import('./PortfolioContent'), {
+    ssr: false,
+});
 
 interface PortfolioContentWrapperProps {
     projects: Project[];
